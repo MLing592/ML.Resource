@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup>
+	<!-- 默认设置C#版本 -->
+	<LangVersion>preview</LangVersion>
+	<!-- 默认关闭GlobalUsing -->
+    <UseGlobalUsing>false</UseGlobalUsing>
+  </PropertyGroup>
+
+  <!-- 按条件引入GlobalUsing -->
+  <ItemGroup Condition="'$(UseGlobalUsing)' == 'true'">
+    <Compile Include="$(SolutionDir)GlobalUsing.cs" />
+  </ItemGroup>
+</Project>
