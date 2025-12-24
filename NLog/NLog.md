@@ -40,3 +40,6 @@ _log.Info("person info: {@Info}", new Person());
 ### 官方文档引用
 1. 文件日志说明：[https://github.com/NLog/NLog/wiki/File-target](https://github.com/NLog/NLog/wiki/File-target)
 2. NLog V6 更新说明：[https://nlog-project.org/2025/04/29/nlog-6-0-major-changes.html](https://nlog-project.org/2025/04/29/nlog-6-0-major-changes.html)
+
+### 更新说明
+1. V2、V3当loggername为"xxxx/xxxx"带有目录解析符时，归档路径`{####}_${level}_${logger}.log`解析时{xxxx}解析失效，因此将`${logger}`作为目录不再作为文件
