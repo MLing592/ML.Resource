@@ -1,4 +1,4 @@
-﻿# MSBuild 全局配置
+# MSBuild 全局配置
 
 这个文件包含 MSBuild 的本地路径配置，用于避免每次都查找 MSBuild 路径。
 
