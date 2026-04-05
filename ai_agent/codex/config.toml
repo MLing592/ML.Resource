@@ -1,0 +1,36 @@
+model_provider = "default"
+model = "gpt-5.4"
+model_reasoning_effort = "xhigh"
+disable_response_storage = true
+
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
+personality = "pragmatic"
+
+network_access = "enabled"
+windows_wsl_setup_acknowledged = true
+model_context_window = 1000000
+model_auto_compact_token_limit = 900000
+
+[model_providers.default]
+name = "default"
+base_url = "https://xxx.xx/v1"
+wire_api = "responses"
+requires_openai_auth = true
+
+[windows]
+sandbox = "elevated"
+
+[mcp_servers.vscode]
+url = "http://127.0.0.1:3000/mcp"
+
+# 需要设置环境变量 GITHUB_MCP_PAT
+[mcp_servers.github]
+url = "https://api.githubcopilot.com/mcp/"
+bearer_token_env_var = "GITHUB_MCP_PAT"
+
+# 需要安装uv
+[mcp_servers.serena]
+command = "uvx"
+args = ["-p", "3.13", "--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server", "--project-from-cwd", "--context", "codex"]
+startup_timeout_sec = 25.0
