@@ -272,3 +272,16 @@ __pycache__/
 
 # Cake - Uncomment if you are using it
 # tools/
+
+# agents
+.codex/
+.vscode/
+.kiro/
+.trae/
+.dotnet/
+.gemini/
+.antigravity/
+.roo/
+.cache/
+.serena/
+.agents/
